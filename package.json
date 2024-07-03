@@ -1,7 +1,23 @@
 {
   "name": "musicdiscoveryplayermobile",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "private": true,
+  "description": "An app as a player through a Last.fm music discovery API",
+  "author": {
+    "name": "Cristian Camilo Bonilla",
+    "email": "cristiancamilo10_95@outlook.com",
+    "url": "https://www.linkedin.com/in/cristian-bonilla95"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:CristianBonilla/MusicDiscoveryPlayerMobile.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": "^18.18.0 || ^20.9.0 || >=21.1.0",
+    "npm": ">=9.8.1",
+    "yarn": ">=1.22.5"
+  },
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios",
@@ -30,7 +46,5 @@
     "react-test-renderer": "18.2.0",
     "typescript": "5.0.4"
   },
-  "engines": {
-    "node": ">=18"
-  }
+  "peerDependencies": {}
 }
