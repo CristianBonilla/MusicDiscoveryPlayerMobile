@@ -23,7 +23,7 @@ import {
   LearnMoreLinks,
   ReloadInstructions
 } from 'react-native/Libraries/NewAppScreen';
-import type {PropsWithChildren} from 'react';
+import type { PropsWithChildren } from 'react';
 
 type SectionProps = PropsWithChildren<{
   title: string;
