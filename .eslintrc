@@ -1,9 +1,164 @@
 {
   "root": true,
   "env": {
-    "browser": true,
-    "es6": true,
-    "node": true
+    "react-native/react-native": true
   },
-  "extends": "@react-native"
+  "extends": [
+    // "@react-native",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:import/recommended",
+    "plugin:react/recommended",
+    "plugin:react-native/all"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint", "@stylistic", "react", "react-native"],
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "rules": {
+    "@stylistic/indent": ["off", 2],
+    "@stylistic/quotes": ["warn", "single"],
+    "@stylistic/semi": ["warn", "always"],
+    "@typescript-eslint/no-unused-vars": "warn",
+    "@typescript-eslint/array-type": "off",
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": [
+      "warn",
+      {
+        "accessibility": "explicit",
+        "overrides": {
+          "accessors": "explicit",
+          "constructors": "off",
+          "methods": "explicit",
+          "properties": "explicit",
+          "parameterProperties": "explicit"
+        }
+      }
+    ],
+    "@typescript-eslint/interface-name-prefix": "off",
+    "@typescript-eslint/member-delimiter-style": [
+      "warn",
+      {
+        "multiline": {
+          "delimiter": "semi",
+          "requireLast": true
+        },
+        "singleline": {
+          "delimiter": "semi",
+          "requireLast": false
+        }
+      }
+    ],
+    "@typescript-eslint/member-ordering": [
+      "warn",
+      {
+        "default": [
+          "static-field",
+          "instance-field",
+          "constructor",
+          "static-method",
+          "instance-method"
+        ]
+      }
+    ],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-inferrable-types": "warn",
+    "@typescript-eslint/no-non-null-assertion": "warn",
+    "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/unbound-method": "off",
+    "@typescript-eslint/no-floating-promises": "off",
+    "array-bracket-spacing": ["warn", "always"],
+    "arrow-parens": ["off", "as-needed"],
+    "comma-dangle": [
+      "warn",
+      {
+        "objects": "never",
+        "arrays": "never",
+        "functions": "never"
+      }
+    ],
+    "curly": "off",
+    "eol-last": "off",
+    "import/no-deprecated": "off",
+    "import/no-duplicates": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "index",
+          "sibling",
+          "parent",
+          "internal",
+          "external",
+          "builtin",
+          "object",
+          "type"
+        ]
+      }
+    ],
+    "import/no-unresolved": "off",
+    "import/namespace": "off",
+    "indent": "off",
+    "jsdoc/no-types": "off",
+    "max-classes-per-file": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 140
+      }
+    ],
+    "no-console": [
+      "warn",
+      {
+        "allow": [
+          "log",
+          "warn",
+          "dir",
+          "timeLog",
+          "assert",
+          "clear",
+          "count",
+          "countReset",
+          "group",
+          "groupEnd",
+          "table",
+          "dirxml",
+          "error",
+          "groupCollapsed",
+          "Console",
+          "profile",
+          "profileEnd",
+          "timeStamp",
+          "context"
+        ]
+      }
+    ],
+    "no-empty": "off",
+    "no-fallthrough": "warn",
+    "no-mixed-operators": "off",
+    "no-multiple-empty-lines": "off",
+    "no-shadow": [
+      "off",
+      {
+        "hoist": "all"
+      }
+    ],
+    "no-trailing-spaces": "off",
+    "no-unused-expressions": "off",
+    "operator-linebreak": ["warn", "after"],
+    "quote-props": ["warn", "consistent-as-needed"],
+    "semi": [1, "always"],
+    "space-before-function-paren": "off",
+    "template-curly-spacing": ["warn", "always"]
+  }
 }
