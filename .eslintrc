@@ -21,7 +21,13 @@
     "project": "./tsconfig.json"
   },
   "rules": {
-    "array-bracket-spacing": ["warn", "always"],
+    "array-bracket-spacing": [
+      "warn",
+      "always",
+      {
+        "singleValue": false
+      }
+    ],
     "arrow-parens": ["off", "as-needed"],
     "comma-dangle": [
       "warn",
@@ -185,7 +191,13 @@
         "@typescript-eslint/no-var-requires": "off",
         "@typescript-eslint/unbound-method": "off",
         "@typescript-eslint/no-floating-promises": "off",
-        "array-bracket-spacing": ["warn", "always"],
+        "array-bracket-spacing": [
+          "warn",
+          "always",
+          {
+            "singleValue": false
+          }
+        ],
         "arrow-parens": ["off", "as-needed"],
         "comma-dangle": [
           "warn",
