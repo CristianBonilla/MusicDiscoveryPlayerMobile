@@ -8,10 +8,10 @@ function CountrySearch() {
     <View style={styles.container} ref={viewRef}>
       <TextInput
         style={styles.input}
-        placeholder='Search'
+        placeholder="Search"
         placeholderTextColor={$inputColor}
         enablesReturnKeyAutomatically
-        clearButtonMode='while-editing' />
+        clearButtonMode="while-editing" />
     </View>
   );
 }
