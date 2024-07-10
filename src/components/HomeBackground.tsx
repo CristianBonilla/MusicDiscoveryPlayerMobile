@@ -8,7 +8,7 @@ function HomeBackground({ children }: PropsWithChildren) {
       <ImageBackground
         source={require('../assets/music-discovery.jpeg') as ImageSourcePropType}
         resizeMode='cover'
-        blurRadius={2}
+        blurRadius={1}
         style={styles.background}>
           {children}
       </ImageBackground>
