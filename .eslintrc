@@ -204,13 +204,12 @@
           {
             "groups": [
               "index",
-              "sibling",
-              "parent",
               "internal",
               "external",
               "builtin",
               "object",
-              "type"
+              "type",
+              ["sibling","parent"]
             ]
           }
         ],
