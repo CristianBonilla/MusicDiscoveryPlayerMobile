@@ -15,7 +15,7 @@ function HomeScreen() {
 }
 
 const $titleColor = '#FFFFFF';
-const $containerTransparent = 'rgba(0, 0, 0, 0.6)';
+const $containerTransparentColor = 'rgba(0, 0, 0, 0.5)';
 
 const styles = StyleSheet.create({
   title: {
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
   },
   wrap: {
     alignItems: 'center',
-    backgroundColor: $containerTransparent,
+    backgroundColor: $containerTransparentColor,
     marginTop: 20,
     paddingBottom: 20
   }

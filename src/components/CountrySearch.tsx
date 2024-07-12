@@ -1,41 +1,52 @@
 import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
+import { SearchButton } from './SearchButton';
+import { CleanSearchButton } from './CleanSearchButton';
 
 function CountrySearch() {
-  const viewRef = React.createRef<View>();
+  const [ text, setText ] = React.useState<string>('');
 
   return (
-    <View style={styles.container} ref={viewRef}>
+    <View style={styles.container}>
+      <SearchButton icon={[ 'fas', 'magnifying-glass' ]} size={25} />
       <TextInput
         style={styles.input}
         placeholder="Search"
-        placeholderTextColor={$inputColor}
+        placeholderTextColor={$placeholderColor}
         enablesReturnKeyAutomatically
-        clearButtonMode="while-editing" />
+        clearButtonMode="never"
+        onChangeText={setText}
+        value={text} />
+      <CleanSearchButton text={text} dispatch={setText} />
     </View>
   );
 }
 
-const $containerBackground = 'rgba(209, 209, 209, 0.93)';
-const $inputTransparent = 'transparent';
-const $inputColor = '#000000';
+const $containerBackgroundColor = 'rgba(209, 209, 209, 0.93)';
+const $transparentColor = 'transparent';
+const $placeholderColor = '#414141';
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: $containerBackground,
+    alignItems: 'center',
+    backgroundColor: $containerBackgroundColor,
     borderRadius: 15,
     borderWidth: 0,
-    height: 60,
-    marginHorizontal: 20,
-    marginTop: 10,
-    padding: 4,
-    width: '95%'
+    flex: 1,
+    flexBasis: 57,
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    marginHorizontal: 10,
+    marginTop: 5,
+    paddingHorizontal: 2.5
   },
   input: {
-    backgroundColor: $inputTransparent,
-    borderRadius: 20,
+    backgroundColor: $transparentColor,
+    borderBottomRightRadius: 15,
+    borderTopRightRadius: 15,
     flex: 1,
-    fontSize: 20
+    fontSize: 20,
+    height: 52
   }
 });
 

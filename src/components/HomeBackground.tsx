@@ -9,7 +9,6 @@ function HomeBackground({ children, style = {} }: HomeBackgroundProps) {
     <ImageBackground
       source={$imageBackground}
       resizeMode="cover"
-      blurRadius={2}
       style={[
         styles.background,
         style
