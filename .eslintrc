@@ -141,7 +141,18 @@
         "@stylistic/indent": ["off", 2],
         "@stylistic/quotes": ["warn", "single"],
         "@stylistic/semi": ["warn", "always"],
-        "@typescript-eslint/no-unused-vars": "warn",
+        "@typescript-eslint/no-unused-vars": [
+          "warn",
+          {
+            "args": "all",
+            "argsIgnorePattern": "^_",
+            "caughtErrors": "all",
+            "caughtErrorsIgnorePattern": "^_",
+            "destructuredArrayIgnorePattern": "^_",
+            "varsIgnorePattern": "^_",
+            "ignoreRestSiblings": true
+          }
+        ],
         "@typescript-eslint/array-type": "off",
         "@typescript-eslint/camelcase": "off",
         "@typescript-eslint/explicit-function-return-type": "off",
