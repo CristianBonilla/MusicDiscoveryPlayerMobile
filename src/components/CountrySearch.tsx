@@ -11,6 +11,10 @@ function CountrySearch() {
       <SearchButton icon={[ 'fas', 'magnifying-glass' ]} size={25} />
       <TextInput
         style={styles.input}
+        keyboardType="default"
+        autoCapitalize="none"
+        spellCheck={false}
+        underlineColorAndroid="transparent"
         placeholder="Search"
         placeholderTextColor={$placeholderColor}
         enablesReturnKeyAutomatically
