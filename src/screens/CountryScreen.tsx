@@ -1,16 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { HomeBackground } from '../components/HomeBackground';
 import { CountrySearch } from '../components/CountrySearch';
 
-function HomeScreen() {
+function CountryScreen() {
   return (
-    <HomeBackground>
+    <SafeAreaView style={styles.container}>
       <View style={styles.wrap}>
         <Text style={styles.title}>Select Country</Text>
         <CountrySearch />
       </View>
-    </HomeBackground>
+    </SafeAreaView>
   );
 }
 
@@ -18,6 +17,10 @@ const $titleColor = '#FFFFFF';
 const $containerTransparentColor = 'rgba(0, 0, 0, 0.5)';
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center'
+  },
   title: {
     color: $titleColor,
     fontSize: 35,
@@ -28,9 +31,8 @@ const styles = StyleSheet.create({
   wrap: {
     alignItems: 'center',
     backgroundColor: $containerTransparentColor,
-    marginTop: 20,
     paddingBottom: 20
   }
 });
 
-export { HomeScreen };
+export { CountryScreen };

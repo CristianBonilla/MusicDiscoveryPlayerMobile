@@ -1,22 +1,20 @@
 import React from 'react';
-import { SafeAreaView, StyleSheet } from 'react-native';
-import { HomeScreen } from './screens/HomeScreen';
+import { NavigationContainer } from '@react-navigation/native';
 import { loadIcons } from './shared/icons';
+import { HomeNavigation } from './navigation/HomeNavigation';
+import { HomeBackground } from './components/HomeBackground';
+import { NAVIGATION_THEME } from './constants/navigation-theme';
 
 loadIcons();
 
 function App() {
   return (
-    <SafeAreaView style={styles.container}>
-      <HomeScreen />
-    </SafeAreaView>
+    <NavigationContainer theme={NAVIGATION_THEME}>
+      <HomeBackground>
+        <HomeNavigation />
+      </HomeBackground>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  }
-});
 
 export { App };
