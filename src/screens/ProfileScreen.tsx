@@ -1,12 +1,10 @@
-import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { CountrySearch } from '../components/CountrySearch';
+import { StyleSheet, Text, View } from 'react-native';
 
-function CountryScreen() {
+function ProfileScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Select Country</Text>
-      <CountrySearch />
+      <Text style={styles.title}>Profile Name</Text>
     </View>
   );
 }
@@ -29,4 +27,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export { CountryScreen };
+export { ProfileScreen };
