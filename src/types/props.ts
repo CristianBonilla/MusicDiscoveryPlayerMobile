@@ -8,6 +8,11 @@ export type InputSharedProps = {
   placeholder?: string;
 };
 
+export type HomeScreenOptions = {
+  text: string;
+  input?: InputSharedProps;
+};
+
 export type HomeBackgroundProps = PropsWithChildren<{ style?: StyleProp<ViewStyle> }>;
 
 export type FontAwesomeIconProps = Pick<Parameters<typeof FontAwesomeIcon>[0], 'icon' | 'size'>;
