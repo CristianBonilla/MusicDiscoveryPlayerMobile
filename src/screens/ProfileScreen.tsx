@@ -1,10 +1,12 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { SharedInput } from '../shared/components/SharedInput';
 
 function ProfileScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Profile Name</Text>
+      <Text style={styles.title}>Profile</Text>
+      <SharedInput placeholder="Username" />
     </View>
   );
 }

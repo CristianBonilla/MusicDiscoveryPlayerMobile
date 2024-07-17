@@ -1,12 +1,12 @@
 import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import { CountrySearch } from '../components/CountrySearch';
+import { SharedInput } from '../shared/components/SharedInput';
 
 function CountryScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Select Country</Text>
-      <CountrySearch />
+      <SharedInput isSearch={true} placeholder="Search" />
     </View>
   );
 }

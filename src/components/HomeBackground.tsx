@@ -1,8 +1,6 @@
 import React from 'react';
-import { ImageBackground, ImageSourcePropType, StyleProp, StyleSheet, ViewStyle } from 'react-native';
-import type { PropsWithChildren } from 'react';
-
-type HomeBackgroundProps = PropsWithChildren<{ style?: StyleProp<ViewStyle> }>;
+import { ImageBackground, ImageSourcePropType, StyleSheet } from 'react-native';
+import type { HomeBackgroundProps } from '../types/props';
 
 function HomeBackground({ children, style = {} }: HomeBackgroundProps) {
   return (

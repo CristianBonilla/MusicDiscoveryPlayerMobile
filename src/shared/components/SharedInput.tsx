@@ -1,27 +1,36 @@
 import React from 'react';
 import { StyleSheet, TextInput, View } from 'react-native';
-import { SearchButton } from './SearchButton';
-import { CleanSearchButton } from './CleanSearchButton';
+import type { InputSharedProps } from '../../types/props';
+import { CleanSearchButton } from '../../components/CleanSearchButton';
+import { SearchButton } from '../../components/SearchButton';
 
-function CountrySearch() {
+function SharedInput({ isSearch, keyboardType, placeholder }: InputSharedProps) {
+  const options = {
+    keyboardType: keyboardType ?? 'default',
+    placeholder
+  };
   const [ text, setText ] = React.useState<string>('');
 
   return (
     <View style={styles.container}>
-      <SearchButton icon={[ 'fas', 'magnifying-glass' ]} size={25} />
+      {
+        !!isSearch && <SearchButton icon={[ 'fas', 'magnifying-glass' ]} size={25} />
+      }
       <TextInput
         style={styles.input}
-        keyboardType="default"
+        keyboardType={options.keyboardType}
         autoCapitalize="none"
         spellCheck={false}
         underlineColorAndroid="transparent"
-        placeholder="Search"
+        placeholder={options.placeholder}
         placeholderTextColor={$placeholderColor}
         enablesReturnKeyAutomatically
         clearButtonMode="never"
         onChangeText={setText}
         value={text} />
-      <CleanSearchButton text={text} dispatch={setText} />
+      {
+        !!isSearch && <CleanSearchButton text={text} dispatch={setText} />
+      }
     </View>
   );
 }
@@ -54,4 +63,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export { CountrySearch };
+export { SharedInput };

@@ -1,5 +1,14 @@
-import { PressableProps } from 'react-native';
+import { KeyboardTypeOptions, PressableProps, StyleProp, ViewStyle } from 'react-native';
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import type { PropsWithChildren } from 'react';
+
+export type InputSharedProps = {
+  isSearch?: boolean;
+  keyboardType?: KeyboardTypeOptions;
+  placeholder?: string;
+};
+
+export type HomeBackgroundProps = PropsWithChildren<{ style?: StyleProp<ViewStyle> }>;
 
 export type FontAwesomeIconProps = Pick<Parameters<typeof FontAwesomeIcon>[0], 'icon' | 'size'>;
 
